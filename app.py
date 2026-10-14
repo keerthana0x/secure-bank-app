@@ -121,8 +121,7 @@ elif st.session_state.auth_stage == "gesture":
     target_gesture = db[user]["gesture"]
     
     st.subheader("✋ Step 3: Gesture Biometric Verification")
-    st.write(f"Required Gesture: **{target_gesture}**")
-    st.write("Take a snapshot showing your chosen gesture to complete login.")
+    st.write("Take a snapshot showing your registered security gesture to complete login.")
     
     picture = st.camera_input("Take photo")
     
@@ -169,7 +168,7 @@ elif st.session_state.auth_stage == "gesture":
                     st.success("🎉 Authentication Successful!")
                     st.rerun()
                 else:
-                    st.error(f"❌ Gesture mismatch. Expected: {target_gesture}. Try again.")
+                    st.error("❌ Gesture mismatch. Please try again with your correct security gesture.")
 
 # --- DASHBOARD ---
 elif st.session_state.auth_stage == "dashboard":
