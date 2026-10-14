@@ -1,0 +1,6 @@
+streamlit
+pyotp
+bcrypt
+opencv-python-headless
+mediapipe
+numpy
